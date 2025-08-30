@@ -6,6 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { FiMail, FiLock } from 'react-icons/fi';
 import { FaUser } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { Link, Navigate } from 'react-router-dom';
 
 const Login = () => {
   const [state, setState] = React.useState('login');
@@ -125,6 +126,13 @@ const Login = () => {
         >
           {state === 'register' ? 'Create Account' : 'Login'}
         </button>
+
+      <Link to="/seller" onClick={()=> {setShowUserLogin(false)}} className="bg-green-600 hover:bg-green-700 text-center text-white py-2 rounded-md transition-all w-full">
+          seller login
+        </Link>
+
+
+
 
         <div className="flex items-center gap-2 text-sm text-black w-full">
           <hr className="flex-grow border-black" />
