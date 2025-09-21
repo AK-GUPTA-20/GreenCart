@@ -22,6 +22,7 @@ export const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      token: token,
     });
 
 
