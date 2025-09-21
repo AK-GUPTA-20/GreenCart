@@ -22,6 +22,7 @@ export const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      
     });
 
 
@@ -42,6 +43,7 @@ export const registerUser = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
+        token: token,
       },
     });
   } catch (err) {
