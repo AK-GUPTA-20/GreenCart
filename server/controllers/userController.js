@@ -22,7 +22,7 @@ export const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      token: token,
+      
     });
 
 
@@ -43,6 +43,7 @@ export const registerUser = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
+        token: token,
       },
     });
   } catch (err) {
@@ -98,6 +99,7 @@ export const loginUser = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
+        token: token,
       },
     });
   } catch (err) {
